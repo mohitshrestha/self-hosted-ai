@@ -38,6 +38,8 @@ privately interact with your local models and N8N agents
 
 ⭐️ **Private Financial Document Analysis** at minimal cost
 
+## Prerequisites
+
 Before you begin, make sure you have the following software installed:
 
 - [Git/GitHub Desktop](https://desktop.github.com/) - For easy repository management
