@@ -2,7 +2,7 @@
 
 **Self-hosted AI Starter Kit** is an open-source Docker Compose template designed to swiftly initialize a comprehensive local AI and low-code development environment.
 
-![n8n.io - Screenshot](https://raw.githubusercontent.com/mohitshrestha/self-hosted-ai-starter-kit/main/assets/n8n-demo.gif)
+![n8n.io - Screenshot](https://raw.githubusercontent.com/mohitshrestha/self-hosted-ai/main/assets/n8n-demo.gif)
 
 Curated by <https://github.com/n8n-io> and <https://github.com/mohitshrestha>, it combines the self-hosted n8n platform with a curated list of compatible AI products and components to quickly get started with building self-hosted AI workflows.
 
@@ -48,8 +48,8 @@ Before you begin, make sure you have the following software installed:
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/mohitshrestha/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/mohitshrestha/self-hosted-ai.git
+cd self-hosted-ai
 cp .env.example .env # you should update secrets and passwords inside
 ```
 
@@ -58,8 +58,8 @@ cp .env.example .env # you should update secrets and passwords inside
 #### For Nvidia GPU users
 
 ```bash
-git clone https://github.com/mohitshrestha/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/mohitshrestha/self-hosted-ai.git
+cd self-hosted-ai
 cp .env.example .env # you should update secrets and passwords inside
 docker compose --profile gpu-nvidia up
 ```
@@ -71,8 +71,8 @@ docker compose --profile gpu-nvidia up
 ### For AMD GPU users on Linux
 
 ```bash
-git clone https://github.com/mohitshrestha/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/mohitshrestha/self-hosted-ai.git
+cd self-hosted-ai
 cp .env.example .env # you should update secrets and passwords inside
 docker compose --profile gpu-amd up
 ```
@@ -92,8 +92,8 @@ If you want to run Ollama on your mac, check the
 for installation instructions, and run the starter kit as follows:
 
 ```bash
-git clone https://github.com/mohitshrestha/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/mohitshrestha/self-hosted-ai.git
+cd self-hosted-ai
 cp .env.example .env # you should update secrets and passwords inside
 docker compose up
 ```
@@ -112,8 +112,8 @@ If you're running OLLAMA locally on your Mac (not in Docker), you need to modify
 #### For everyone else
 
 ```bash
-git clone https://github.com/mohitshrestha/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/mohitshrestha/self-hosted-ai.git
+cd self-hosted-ai
 cp .env.example .env # you should update secrets and passwords inside
 docker compose --profile cpu up
 ```
