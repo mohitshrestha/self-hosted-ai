@@ -38,6 +38,7 @@ x-n8n: &service-n8n
         
         # n8n runners settings (enabling parallel execution)
         - N8N_RUNNERS_ENABLED=${N8N_RUNNERS_ENABLED:-true}  # Default to 'true' if not set
+        - N8N_SECURE_COOKIE=${N8N_SECURE_COOKIE:-false}  # check .env file and Select true for setting up TLS/HTTPS for n8n server
 
         - WEBHOOK_URL=${N8N_HOSTNAME:+https://}${N8N_HOSTNAME:-http://localhost:5678}
     env_file:
