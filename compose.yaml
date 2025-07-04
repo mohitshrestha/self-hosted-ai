@@ -74,19 +74,19 @@ x-init-ollama: &init-ollama
     container_name: ollama-pull-models  # Name the container for easy identification
     volumes:
         - ollama_storage:/root/.ollama  # Share the Ollama storage volume
-        - ./scripts/ollama_pull_models.sh:/scripts/ollama_pull_models.sh:ro
+        - ./scripts/ollama_pull_models.sh:/scripts/ollama_pull_models.sh
     environment:
         - OLLAMA_HOST=ollama:11434  # Ensure the initialization job knows the Ollama address
     entrypoint: /bin/sh  # Use shell to execute custom commands
     command:
         - "-c"
-        - "./scripts/ollama_pull_models.sh"  # Pull the specific version of Ollama models (e.g., llama3.2) that are listed in that "scripts/ollama_pull_models.sh file"
+        - "chmod +x ./scripts/ollama_pull_models.sh && ./scripts/ollama_pull_models.sh"  # Pull the specific version of Ollama models (e.g., llama3.2) that are listed in that "scripts/ollama_pull_models.sh file"
 
 # Define services
 services:
     # PostgreSQL service for n8n database backend
     postgres:
-        image: postgres:${POSTGRES_VERSION:-latest}  # Version for Postgres image, defined in the .env file. If not defined defaults to latest
+        image: postgres:${POSTGRES_VERSION:-16-alpine}  # Version for Postgres image, defined in the .env file. If not defined defaults to 16-alpine
         hostname: ${POSTGRES_HOSTNAME:-postgres}  # Set container hostname; Default to 'postgres' if not set
         container_name: postgres  # Name the container for easy identification
         networks: ['demo']  # Attach PostgreSQL to the demo network
